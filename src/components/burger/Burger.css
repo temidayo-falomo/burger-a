@@ -1,0 +1,78 @@
+.burger {
+  max-width: 600px;
+  min-width: 600px;
+  padding: 20px;
+  height: 600px;
+  background-image: url("../../../public/assets/bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.burger img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.ketchup {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 120px !important;
+}
+
+.useimg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  object-fit: contain;
+}
+
+.useimg img {
+  width: 300px !important;
+  object-fit: contain;
+}
+
+.ingredients {
+  height: 420px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  overflow-y: auto;
+}
+
+.comment {
+  position: absolute;
+  bottom: 50%;
+  left: -20px;
+  width: 150px !important;
+}
+
+.ingredients::-webkit-scrollbar {
+  width: 0.8em;
+}
+
+.ingredients::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.ingredients::-webkit-scrollbar-thumb {
+  background-color: #5243C2;
+}
+
+@media (max-width: 750px) {
+    .burger {
+        min-width: 95% !important;
+        height: 500px;
+    }
+
+    .ingredients img {
+        max-width: 200px !important;
+    }
+}

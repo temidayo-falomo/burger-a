@@ -1,0 +1,10 @@
+.count-boxes {
+    /* border: 2px royalblue solid; */
+    width: 90%;
+    margin: 0 auto;
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}

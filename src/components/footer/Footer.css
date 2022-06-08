@@ -1,0 +1,38 @@
+footer {
+    /* min-height: 100px; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 2%;
+    margin-top: 3rem;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-right {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-right img {
+    cursor: pointer;
+}
+
+@media(max-width: 800px) {
+    footer {
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .footer-left {
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+}

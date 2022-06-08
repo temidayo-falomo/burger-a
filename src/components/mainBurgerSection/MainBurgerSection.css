@@ -1,0 +1,31 @@
+.main-burger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 20px;
+    gap: 2rem;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    /* border: 2px rgb(148, 148, 231) solid; */
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: 20px;
+}
+
+.main-burger-left {
+    width: 400px;
+}
+
+.main-burger-left h1 {
+    font-size: 4rem;
+    width: 100%;
+}
+
+@media(max-width: 1500px) {
+    .main-burger {
+        flex-direction: column;
+        text-align: center;
+    }
+}

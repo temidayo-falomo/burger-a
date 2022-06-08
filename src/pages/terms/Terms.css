@@ -1,0 +1,16 @@
+.Terms {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+.Terms footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.Terms h3 {
+    margin: auto;
+    height: 100%;
+}
