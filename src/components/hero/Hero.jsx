@@ -10,7 +10,7 @@ function Hero() {
       </div>
 
       <div className="hero-right">
-        <img src="./assets/hero-img.svg" alt="" />
+        <img src="./assets/main-img.png" alt="" rel="preload" as="image" />
         <Link to="/make-burger">
           <button className="hero-btn">Make Burger</button>
         </Link>
