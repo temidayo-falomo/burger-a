@@ -7,14 +7,14 @@ import "./Summary.css";
 function Summary() {
   const { showModal, setShowModal } = useContext(CountContext);
 
-  const { getCutletId, setGetCutletId } = useContext(CountContext);
-  const { getMayoId, setGetMayoId } = useContext(CountContext);
-  const { getOnionId, setGetOnionId } = useContext(CountContext);
-  const { getTomatoId, setGetTomatoId } = useContext(CountContext);
-  const { getCucumberId, setGetCucumberId } = useContext(CountContext);
-  const { getCheeseId, setGetCheeseId } = useContext(CountContext);
-  const { getSaladId, setGetSaladId } = useContext(CountContext);
-  const { getBunId, setGetBunId } = useContext(CountContext);
+  const { getCutletCount, setGetCutletCount } = useContext(CountContext);
+  const { getMayoCount, setGetMayoCount } = useContext(CountContext);
+  const { getOnionCount, setGetOnionCount } = useContext(CountContext);
+  const { getTomatoCount, setGetTomatoCount } = useContext(CountContext);
+  const { getCucumberCount, setGetCucumberCount } = useContext(CountContext);
+  const { getCheeseCount, setGetCheeseCount } = useContext(CountContext);
+  const { getSaladCount, setGetSaladCount } = useContext(CountContext);
+  const { getBunCount, setGetBunCount } = useContext(CountContext);
 
   const handleClick = () => {
     setShowModal(!showModal);
@@ -31,26 +31,26 @@ function Summary() {
             <div className="summary-middle">
               <h4>
                 $
-                {getCutletId +
-                  getMayoId +
-                  getOnionId +
-                  getTomatoId +
-                  getCucumberId +
-                  getCheeseId +
-                  getSaladId +
-                  getBunId}.00
+                {getCutletCount +
+                  getMayoCount +
+                  getOnionCount +
+                  getCucumberCount +
+                  getCheeseCount +
+                  getSaladCount +
+                  getBunCount}
+                .00
               </h4>
               <button onClick={handleClick}>Checkout</button>
             </div>
             <div className="summary-bottom">
               <p>
                 <img src="./assets/min.svg" alt="" />
-                <span>{getCutletId + 2}</span>
+                <span>{getCutletCount + 2}</span>
                 <span>min</span>
               </p>
               <p>
                 <img src="./assets/oz.svg" alt="" />
-                <span>{getCutletId + getMayoId +getSaladId}.00 oz</span>
+                <span>{((getBunCount / 1) * getCutletCount) / 1}</span>
                 <span>oz</span>
               </p>
               <p>
@@ -63,6 +63,7 @@ function Summary() {
           <Modal />
         </>
       ) : (
+        // Same With Above
         <div className="summary">
           <div className="summary-top">
             <h3>Summary</h3>
@@ -70,31 +71,37 @@ function Summary() {
           <div className="summary-middle">
             <h4>
               $
-              {getCutletId +
-                getMayoId +
-                getOnionId +
-                getTomatoId +
-                getCucumberId +
-                getCheeseId +
-                getSaladId +
-                getBunId}.00
+              {getCutletCount +
+                getMayoCount +
+                getOnionCount +
+                getCucumberCount +
+                getCheeseCount +
+                getSaladCount +
+                getBunCount}
+              .00
             </h4>
             <button onClick={handleClick}>Checkout</button>
           </div>
           <div className="summary-bottom">
             <p>
               <img src="./assets/min.svg" alt="" />
-              <span>{getCutletId + 2}</span>
+              <span>{getCutletCount + 2}</span>
               <span>min</span>
             </p>
             <p>
               <img src="./assets/oz.svg" alt="" />
-              <span>{getCutletId + getMayoId +getSaladId}.00</span>
+              <span>{(((getBunCount / 2) * getCutletCount) / 2) * 2 + 1}</span>
               <span>oz</span>
             </p>
             <p>
               <img src="./assets/kcal.svg" alt="" />
-              <span>{getCutletId * getMayoId * getSaladId * 5}</span>
+              <span>
+                {getMayoCount +
+                  getBunCount +
+                  getCheeseCount +
+                  getCutletCount +
+                  getTomatoCount}
+              </span>
               <span>kcal</span>
             </p>
           </div>

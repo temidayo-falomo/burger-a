@@ -1,29 +1,16 @@
-import axios from 'axios';
 import React from 'react'
 import { useContext } from 'react';
 import { CountContext } from '../../helper/Context';
 
 function Cheese() {
-  const { getCheeseId, setGetCheeseId } = useContext(CountContext);
+  const { getCheeseCount, setGetCheeseCount } = useContext(CountContext);
 
-  let data = {
-    id: getCheeseId + 1,
-    name: "cheese",
-    image: "./assets/cheese.svg",
-  };
-
-  //Handle Increment/Post data to jsonDB
   const handleIncrement = () => {
-    axios
-      .post("http://localhost:3500/cheese", data)
-      .then(window.location.reload());
+    setGetCheeseCount((count) => count + 1);
   };
 
-  //Handle Decrement/Delete data from jsonDB
-  const handleDecrement = (id) => {
-    axios
-      .delete(`http://localhost:3500/cheese/${Number(id)}`, data)
-      .then(window.location.reload());
+  const handleDecrement = () => {
+    setGetCheeseCount((count) => count - 1);
   };
 
   return (
@@ -31,13 +18,13 @@ function Cheese() {
       <img src="./assets/cheese.svg" alt="" />
       <h4>Cheese</h4>
       <div className="count-div">
-        {getCheeseId <= 0 ? (
+        {getCheeseCount <= 0 ? (
           <button disabled>-</button>
         ) : (
-          <button onClick={() => handleDecrement(data.id - 1)}>-</button>
+          <button onClick={handleDecrement}>-</button>
         )}
-        <h2>{getCheeseId}</h2>
-        <button onClick={() => handleIncrement()}>+</button>
+        <h2>{getCheeseCount}</h2>
+        <button onClick={handleIncrement}>+</button>
       </div>
     </div>
   );

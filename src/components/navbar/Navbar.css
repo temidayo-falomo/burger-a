@@ -27,6 +27,7 @@ p {
 
 .nav-left {
   display: flex;
+  align-items: center;
   gap: 2rem;
 }
 

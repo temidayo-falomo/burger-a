@@ -6,14 +6,14 @@ import "./Modal.css";
 function Modal() {
   const { showModal, setShowModal } = useContext(CountContext);
 
-  const { getCutletId, setGetCutletId } = useContext(CountContext);
-  const { getMayoId, setGetMayoId } = useContext(CountContext);
-  const { getOnionId, setGetOnionId } = useContext(CountContext);
-  const { getTomatoId, setGetTomatoId } = useContext(CountContext);
-  const { getCucumberId, setGetCucumberId } = useContext(CountContext);
-  const { getCheeseId, setGetCheeseId } = useContext(CountContext);
-  const { getSaladId, setGetSaladId } = useContext(CountContext);
-  const { getBunId, setGetBunId } = useContext(CountContext);
+  const { getCutletCount, setGetCutletCount } = useContext(CountContext);
+  const { getMayoCount, setGetMayoCount } = useContext(CountContext);
+  const { getOnionCount, setGetOnionCount } = useContext(CountContext);
+  const { getTomatoCount, setGetTomatoCount } = useContext(CountContext);
+  const { getCucumberCount, setGetCucumberCount } = useContext(CountContext);
+  const { getCheeseCount, setGetCheeseCount } = useContext(CountContext);
+  const { getSaladCount, setGetSaladCount } = useContext(CountContext);
+  const { getBunCount, setGetBunCount } = useContext(CountContext);
 
   return (
     <div className="modal">
@@ -29,14 +29,14 @@ function Modal() {
         <div className="modal-box-content">
           <p style={{ marginBottom: "10px" }}>Your Hamburger Ingridients:</p>
           <ul>
-            <li>{getCutletId} Cutlet(s)</li>
-            <li>{getMayoId} helping(s) of Mayo</li>
-            <li>{getOnionId} Onion(s)</li>
-            <li>{getTomatoId} Tomato(es)</li>
-            <li>{getCucumberId} Cucumber(s)</li>
-            <li>{getCheeseId} Cheese</li>
-            <li>{getSaladId} Salad(s)</li>
-            <li>{getBunId} Extra Bun(s)</li>
+            <li>{getCutletCount} Cutlet(s)</li>
+            <li>{getMayoCount} Mayo spread(s)</li>
+            <li>{getOnionCount} Onion(s)</li>
+            <li>{getTomatoCount} Tomato(es)</li>
+            <li>{getCucumberCount} Cucumber(s)</li>
+            <li>{getCheeseCount} Cheese</li>
+            <li>{getSaladCount} Salad(s)</li>
+            <li>{getBunCount} Extra Bun(s)</li>
             <button onClick={() => alert("Would Integrate Payment soon!")}>
               Pay
             </button>

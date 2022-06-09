@@ -1,29 +1,16 @@
 import React from "react";
-import axios from "axios";
 import { useContext } from "react";
 import { CountContext } from "../../helper/Context";
 
 function Cutlet() {
-  const { getCutletId, setGetCutletId } = useContext(CountContext);
+  const { getCutletCount, setGetCutletCount } = useContext(CountContext);
 
-  let data = {
-    id: getCutletId + 1,
-    name: "Culet",
-    image: "./assets/cutlet.svg",
-  };
-
-  //Handle Increment/Post data to jsonDB
   const handleIncrement = () => {
-    axios
-      .post("http://localhost:3500/cutlet", data)
-      .then(window.location.reload());
+    setGetCutletCount((count) => count + 1);
   };
 
-  //Handle Decrement/Delete data from jsonDB
-  const handleDecrement = (id) => {
-    axios
-      .delete(`http://localhost:3500/cutlet/${Number(id)}`, data)
-      .then(window.location.reload());
+  const handleDecrement = () => {
+    setGetCutletCount((count) => count - 1);
   };
 
   return (
@@ -31,13 +18,13 @@ function Cutlet() {
       <img src="./assets/cutlet.svg" alt="" />
       <h4>Culet</h4>
       <div className="count-div">
-        {getCutletId <= 0 ? (
+        {getCutletCount <= 0 ? (
           <button disabled>-</button>
         ) : (
-          <button onClick={() => handleDecrement(data.id - 1)}>-</button>
+          <button onClick={handleDecrement}>-</button>
         )}
-        <h2>{getCutletId}</h2>
-        <button onClick={() => handleIncrement()}>+</button>
+        <h2>{getCutletCount}</h2>
+        <button onClick={handleIncrement}>+</button>
       </div>
     </div>
   );

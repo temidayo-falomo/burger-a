@@ -57,9 +57,9 @@
 }
 
 .modal-box-content ul li::first-letter {
-  color: rgb(27, 177, 14);
+  color: #5243c2;
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 @media(max-width: 680px) {

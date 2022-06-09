@@ -7,37 +7,37 @@ import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 
 function MakeBurger() {
-  const [getCutletId, setGetCutletId] = useState(0);
-  const [getMayoId, setGetMayoId] = useState(0);
-  const [getOnionId, setGetOnionId] = useState(0);
-  const [getTomatoId, setGetTomatoId] = useState(0);
-  const [getCucumberId, setGetCucumberId] = useState(0);
-  const [getCheeseId, setGetCheeseId] = useState(0);
-  const [getSaladId, setGetSaladId] = useState(0);
-  const [getBunId, setGetBunId] = useState(0);
+  const [getCutletCount, setGetCutletCount] = useState(0);
+  const [getMayoCount, setGetMayoCount] = useState(0);
+  const [getOnionCount, setGetOnionCount] = useState(0);
+  const [getTomatoCount, setGetTomatoCount] = useState(0);
+  const [getCucumberCount, setGetCucumberCount] = useState(0);
+  const [getCheeseCount, setGetCheeseCount] = useState(0);
+  const [getSaladCount, setGetSaladCount] = useState(0);
+  const [getBunCount, setGetBunCount] = useState(0);
   const [showModal, setShowModal] = useState(false);
 
   return (
     <CountContext.Provider
       value={{
-        getCutletId,
-        setGetCutletId,
-        getMayoId,
-        setGetMayoId,
-        getOnionId,
-        setGetOnionId,
-        getTomatoId,
-        setGetTomatoId,
-        getCucumberId,
-        setGetCucumberId,
-        getCheeseId,
-        setGetCheeseId,
-        getSaladId,
-        setGetSaladId,
-        getBunId,
-        setGetBunId,
+        getCutletCount,
+        setGetCutletCount,
+        getMayoCount,
+        setGetMayoCount,
+        getOnionCount,
+        setGetOnionCount,
+        getTomatoCount,
+        setGetTomatoCount,
+        getCucumberCount,
+        setGetCucumberCount,
+        getCheeseCount,
+        setGetCheeseCount,
+        getSaladCount,
+        setGetSaladCount,
+        getBunCount,
+        setGetBunCount,
         showModal,
-        setShowModal
+        setShowModal,
       }}
     >
       <Navbar />

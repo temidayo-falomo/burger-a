@@ -1,6 +1,6 @@
 ##Author's Note
 
-I Built this because i'm a sucker for goood ui and i had some free time on my hands.
+I Built this because i'm a sucker for goood ui and I had some free time on my hands.
 You should Absolutely check out the UI designer on Figma.
 I added a few mods of my own 👀
 

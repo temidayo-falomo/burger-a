@@ -1,58 +1,18 @@
 import React from "react";
-import axios from "axios";
 import "./Burger.css";
-import { useState } from "react";
-import { useEffect } from "react";
 import { useContext } from "react";
 import { CountContext } from "../../helper/Context";
+import { burgerObject } from "../../db/burgerObject";
 
 function Burger() {
-  const [cutletList, setCutletList] = useState([]);
-  const [mayoList, setMayoList] = useState([]);
-  const [onionList, setOnionList] = useState([]);
-  const [tomatoList, setTomatoList] = useState([]);
-  const [cucumberList, setCucumberList] = useState([]);
-  const [cheeseList, setCheeseList] = useState([]);
-  const [saladList, setSaladList] = useState([]);
-  const [bunList, setBunList] = useState([]);
-
-  const { getCutletId, setGetCutletId } = useContext(CountContext);
-  const { getMayoId, setGetMayoId } = useContext(CountContext);
-  const { getOnionId, setGetOnionId } = useContext(CountContext);
-  const { getTomatoId, setGetTomatoId } = useContext(CountContext);
-  const { getCucumberId, setGetCucumberId } = useContext(CountContext);
-  const { getCheeseId, setGetCheeseId } = useContext(CountContext);
-  const { getSaladId, setGetSaladId } = useContext(CountContext);
-  const { getBunId, setGetBunId } = useContext(CountContext);
-
-  useEffect(() => {
-    axios.all([
-      axios
-        .get("http://localhost:3500/cutlet")
-        .then((res) => setCutletList(res.data.reverse())),
-      axios
-        .get("http://localhost:3500/mayo")
-        .then((res) => setMayoList(res.data.reverse())),
-      axios
-        .get("http://localhost:3500/onion")
-        .then((res) => setOnionList(res.data.reverse())),
-      axios
-        .get("http://localhost:3500/tomato")
-        .then((res) => setTomatoList(res.data.reverse())),
-      axios
-        .get("http://localhost:3500/cucumber")
-        .then((res) => setCucumberList(res.data.reverse())),
-      axios
-        .get("http://localhost:3500/cheese")
-        .then((res) => setCheeseList(res.data.reverse())),
-      axios
-        .get("http://localhost:3500/salad")
-        .then((res) => setSaladList(res.data.reverse())),
-      axios
-        .get("http://localhost:3500/bun")
-        .then((res) => setBunList(res.data.reverse())),
-    ]);
-  }, []);
+  const { getCutletCount, setGetCutletCount } = useContext(CountContext);
+  const { getMayoCount, setGetMayoCount } = useContext(CountContext);
+  const { getOnionCount, setGetOnionCount } = useContext(CountContext);
+  const { getTomatoCount, setGetTomatoCount } = useContext(CountContext);
+  const { getCucumberCount, setGetCucumberCount } = useContext(CountContext);
+  const { getCheeseCount, setGetCheeseCount } = useContext(CountContext);
+  const { getSaladCount, setGetSaladCount } = useContext(CountContext);
+  const { getBunCount, setGetBunCount } = useContext(CountContext);
 
   return (
     <div className="burger">
@@ -60,74 +20,79 @@ function Burger() {
 
       <div className="ingredients">
 
-        {cutletList.map((data, index) => {
+        {/* Cutlet Array */}
+        {[...Array(burgerObject.cutlet + getCutletCount)].map((index) => {
           return (
-            <div className="useimg" key={index + 1}>
-              <img src={data.image} alt="" />
-              {setGetCutletId(index + 1)}
+            <div className="useimg" key={index}>
+              <img src="./assets/cutlet.svg" alt="cutlet-pic" />
             </div>
           );
         })}
 
-        {mayoList.map((data, index) => {
+        {/* Mayo Array */}
+        {[...Array(burgerObject.mayo + getMayoCount)].map((index) => {
           return (
-            <div className="useimg" key={index + 1}>
-              <img src={data.image} alt="" />
-              {setGetMayoId(index + 1)}
+            <div className="useimg" key={index}>
+              <img src="./assets/mayo.svg" alt="mayo-pic" />
             </div>
           );
         })}
 
-        {onionList.map((data, index) => {
+        {/* Onion Array */}
+        {[...Array(burgerObject.onion + getOnionCount)].map((index) => {
           return (
-            <div className="useimg" key={index + 1}>
-              <img src={data.image} alt="" />
-              {setGetOnionId(index + 1)}
+            <div className="useimg" key={index}>
+              <img src="./assets/onion.svg" alt="onion-pic" />
             </div>
           );
         })}
 
-        {tomatoList.map((data, index) => {
+        {/* Tomato Array */}
+
+        {[...Array(burgerObject.tomato + getTomatoCount)].map((index) => {
           return (
-            <div className="useimg" key={index + 1}>
-              <img src={data.image} alt="" />
-              {setGetTomatoId(index + 1)}
+            <div className="useimg" key={index}>
+              <img src="./assets/tomatoe.svg" alt="tomato-pic" />
             </div>
           );
         })}
 
-        {cucumberList.map((data, index) => {
+        {/* Cucumber Array */}
+
+        {[...Array(burgerObject.cucumber + getCucumberCount)].map((index) => {
           return (
-            <div className="useimg" key={index + 1}>
-              <img src={data.image} alt="" />
-              {setGetCucumberId(index + 1)}
+            <div className="useimg" key={index}>
+              <img src="./assets/cucumber.svg" alt="cucumber-pic" />
             </div>
           );
         })}
 
-        {cheeseList.map((data, index) => {
+        {/* Cheese Array */}
+
+        {[...Array(burgerObject.cheese + getCheeseCount)].map((index) => {
           return (
-            <div className="useimg" key={index + 1}>
-              <img src={data.image} alt="" />
-              {setGetCheeseId(index + 1)}
+            <div className="useimg" key={index}>
+              <img src="./assets/cheese.svg" alt="cheese-pic" />
             </div>
           );
         })}
 
-        {saladList.map((data, index) => {
+        {/* Salad Array */}
+
+        {[...Array(burgerObject.salad + getSaladCount)].map((index) => {
           return (
-            <div className="useimg" key={index + 1}>
-              <img src={data.image} alt="" />
-              {setGetSaladId(index + 1)}
+            <div className="useimg" key={index}>
+              <img src="./assets/salad.svg" alt="salad-pic" />
             </div>
           );
         })}
 
-        {bunList.map((data, index) => {
+        {/* Bun Array */}
+
+        {[...Array(burgerObject.bun + getBunCount)].map((index) => {
           return (
-            <div className="useimg" key={index + 1}>
-              <img src={data.image} alt="" />
-              {setGetBunId(index + 1)}
+            <div className="useimg" key={index}>
+              <img src="./assets/bun_middle.svg" alt="mayo-pic" />
             </div>
           );
         })}
