@@ -12,9 +12,9 @@ salad: 0,
 cutlet: 0,
 };
 
-##3: Now, for the best part, i'm using a very inuitive(i must say) spread syntax technique i discovered to repeat a particular ingridient based on the current count
+##3: Now, for the best part, i'm using a very Intuitive(i must say) spread syntax technique i discovered to repeat a particular Ingredient based on the current count
 e.g {[...Array(burger.mayo + mayoCount)].map((index) => {
-return <img src=IMAGEURL />;
+return (img src=IMAGEURL />);
 })}
 
 !!!!!!!!Helpful Links!!!!!!!!!!!!
