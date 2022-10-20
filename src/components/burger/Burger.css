@@ -13,6 +13,11 @@
   position: relative;
 }
 
+.burger .bun-top,
+.bun-bottom {
+  min-width: 280px;
+}
+
 .burger img {
   width: 80%;
   margin: 0 auto;
@@ -63,16 +68,16 @@
 }
 
 .ingredients::-webkit-scrollbar-thumb {
-  background-color: #5243C2;
+  background-color: #5243c2;
 }
 
 @media (max-width: 750px) {
-    .burger {
-        min-width: 95% !important;
-        height: 500px;
-    }
+  .burger {
+    min-width: 95% !important;
+    height: 500px;
+  }
 
-    .ingredients img {
-        max-width: 200px !important;
-    }
+  .ingredients img {
+    max-width: 200px !important;
+  }
 }

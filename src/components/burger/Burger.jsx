@@ -5,21 +5,22 @@ import { CountContext } from "../../helper/Context";
 import { burgerObject } from "../../db/burgerObject";
 
 function Burger() {
-  const { getCutletCount, setGetCutletCount } = useContext(CountContext);
-  const { getMayoCount, setGetMayoCount } = useContext(CountContext);
-  const { getOnionCount, setGetOnionCount } = useContext(CountContext);
-  const { getTomatoCount, setGetTomatoCount } = useContext(CountContext);
-  const { getCucumberCount, setGetCucumberCount } = useContext(CountContext);
-  const { getCheeseCount, setGetCheeseCount } = useContext(CountContext);
-  const { getSaladCount, setGetSaladCount } = useContext(CountContext);
-  const { getBunCount, setGetBunCount } = useContext(CountContext);
+  const {
+    getCutletCount,
+    getMayoCount,
+    getOnionCount,
+    getTomatoCount,
+    getCucumberCount,
+    getCheeseCount,
+    getSaladCount,
+    getBunCount,
+  } = useContext(CountContext);
 
   return (
     <div className="burger">
-      <img src="./assets/bun_top.svg" alt="" />
+      <img src="./assets/bun_top.svg" alt="" className="bun-top"/>
 
       <div className="ingredients">
-
         {/* Cutlet Array */}
         {[...Array(burgerObject.cutlet + getCutletCount)].map((index) => {
           return (
@@ -96,9 +97,8 @@ function Burger() {
             </div>
           );
         })}
-        
       </div>
-      <img src="./assets/burger_bottom.svg" alt="" />
+      <img src="./assets/burger_bottom.svg" alt="" className="bun-bottom"/>
       <img src="./assets/ketchup.svg" alt="" className="ketchup" />
       <img src="./assets/comment.svg" alt="" className="comment" />
     </div>
