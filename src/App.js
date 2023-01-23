@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Discover from "./pages/discover/Discover";
 import MakeBurger from "./pages/makeBurger/MakeBurger";
 import Terms from "./pages/terms/Terms";

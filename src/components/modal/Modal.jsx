@@ -6,14 +6,16 @@ import "./Modal.css";
 function Modal() {
   const { showModal, setShowModal } = useContext(CountContext);
 
-  const { getCutletCount, setGetCutletCount } = useContext(CountContext);
-  const { getMayoCount, setGetMayoCount } = useContext(CountContext);
-  const { getOnionCount, setGetOnionCount } = useContext(CountContext);
-  const { getTomatoCount, setGetTomatoCount } = useContext(CountContext);
-  const { getCucumberCount, setGetCucumberCount } = useContext(CountContext);
-  const { getCheeseCount, setGetCheeseCount } = useContext(CountContext);
-  const { getSaladCount, setGetSaladCount } = useContext(CountContext);
-  const { getBunCount, setGetBunCount } = useContext(CountContext);
+  const {
+    getCutletCount,
+    getMayoCount,
+    getOnionCount,
+    getTomatoCount,
+    getCucumberCount,
+    getCheeseCount,
+    getSaladCount,
+    getBunCount,
+  } = useContext(CountContext);
 
   return (
     <div className="modal">
