@@ -1,47 +1,61 @@
-##Author's Note
 
-!!!!!!Thought Process!!!!!!!!!!
+# Burger-A
 
-##1: Created States for the individual ingridients(which was a bit stressful)
-e.g const [mayoCount, setMayoCount] = useState(2);
+A web app that allows users to build their custom Burger & Mimic Checkout.
+## Installation
 
-##2: Created an object containing each ingridient and the current amount the user has added, which is by default = 0
-e.g const burger = {
-mayo: 0,
-salad: 0,
-cutlet: 0,
-};
+Install my-project with npm
 
-##3: Now, for the best part, i'm using a very Intuitive(i must say) spread syntax technique i discovered to repeat a particular Ingredient based on the current count
-e.g {[...Array(burger.mayo + mayoCount)].map((index) => {
-return (img src=IMAGEURL />);
-})}
+```bash
+  npm install my-project
+  cd my-project
+```
+    
+## Demo
 
-!!!!!!!!Helpful Links!!!!!!!!!!!!
-
-How to use [...Array(n)] ?
-https://simplernerd.com/jsx-repeat-n-times/
+https://burger-a.netlify.app/make-burger
 
 
-!!!!!!!!! Hooks used !!!!!!!!!!!!
+## Support
 
-1. useState
-2. useEffect
-3. useContext
+For support, email temmideee@gmail.com or send a message on Twitter.
 
 
-!!!!!!!!! Extra Notes !!!!!!!
+## Documentation
 
-I Built this because i'm a sucker for goood ui and I had some free time on my hands.
-You should Absolutely check out the UI designer on Figma.
-I added a few mods of my own 👀
+- Created States for the individual ingridients(which was a bit stressful) e.g const [mayoCount, setMayoCount] = useState(2);
 
-##My Portfolio (Hire Me)
-https://temidayo-falomo.netlify.app/
+- Created an object containing each ingridient and the current amount the user has added, which is by default = 0. E.g const burger = { mayo: 0, salad: 0, cutlet: 0, };
 
-##Designer's Figma Link
-https://www.figma.com/@vittorioewing
+- Now, for the best part, i'm using a very Intuitive(i must say) spread syntax technique i discovered to repeat a particular Ingredient based on the current count e.g {[...Array(burger.mayo + mayoCount)].map((index) => { return (img src=IMAGEURL />); })}
 
-##Link to Free Figma File
-https://www.figma.com/community/file/1107567946234728369
+##
+
+## Helpful Links:
+
+How to use ...Array(n)
+(https://simplernerd.com/jsx-repeat-n-times/)
+
+##
+
+# Hooks
+
+useState
+
+useEffect
+
+useContext
+
+
+
+## Acknowledgements
+
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [My Portfolio](https://temidayo-falomo.netlify.app/)
+ - [Designer's Figma Link](https://www.figma.com/@vittorioewing)
+ - [Link to Free Figma File](https://www.figma.com/community/file/1107567946234728369)
+ 
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
 
