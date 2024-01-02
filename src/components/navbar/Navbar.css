@@ -26,14 +26,13 @@ p {
 }
 
 .nav-left {
-  display: flex;
+  display: flex !important;
   align-items: center;
   gap: 2rem;
 }
 
 .nav-left a:hover {
-  border-bottom: 3px #5243C2 solid;
-  padding-bottom: 20px;
+  color: #5243c2;
 }
 
 nav button {
